@@ -1,3 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -39,7 +42,7 @@
 						<ul class="user-menu">				
 							<li><a href="#">My Account</a></li>
 							<li><a href="cart.html">Your Cart</a></li>
-							<li><a href="<?php echo base_url(); ?>index.php/home/checkout">Checkout</a></li>					
+							<li><a href="<?php echo base_url(); ?>home/checkout">Checkout</a></li>					
 							<li><a href="register.html">Login</a></li>		
 						</ul>
 					</div>

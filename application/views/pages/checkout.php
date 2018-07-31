@@ -1,3 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <div class="accordion" id="accordion2">
 							<div class="accordion-group">
 								<div class="accordion-heading">
