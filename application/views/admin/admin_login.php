@@ -56,6 +56,15 @@
 						<a href="#"><i class="halflings-icon cog"></i></a>
 					</div>
 					<h2>Login to your account</h2>
+					<h3 style="color:red;">
+						<?php
+						$message = $this->session->userdata('message');
+						if($message){
+							echo $message;
+							$this->session->unset_userdata('message');
+						}
+						?>
+					</h3>
 					<form class="form-horizontal" action="<?php echo base_url(); ?>login-check" method="post">
 						<fieldset>
 							

@@ -13,11 +13,17 @@ class Admin extends CI_Controller {
 		
 		$this->load->model('admin_model');
 		$result = $this->admin_model->check_admin_login_info($email_address, $password);
+		$sdata=array();
 
 		if($result){
-			$this->load->view('admin/admin_master');
+			$sdata['admin_id'] = $result->admin_id;
+			$sdata['admin_name'] = $result->admin_name;
+			$this->session->set_userdata($sdata);
+			redirect('/dashboard');
 		}
 		else{
+			$sdata['message']="Your user id or password invalide !";
+			$this->session->set_userdata($sdata);
 			redirect('abcd');
 		}
 

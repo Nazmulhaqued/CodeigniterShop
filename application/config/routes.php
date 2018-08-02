@@ -58,6 +58,8 @@ $route['checkout'] = 'home/checkout';
 // Admin Router
 $route['abcd'] = 'admin/index';
 $route['login-check'] = 'admin/admin_login_check';
+$route['dashboard'] = 'super_admin/index';
+$route['logout'] = 'super_admin/logout';
 
 
 
