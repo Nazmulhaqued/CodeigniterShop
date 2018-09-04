@@ -342,6 +342,8 @@
 
 						<li><a href="<?php echo base_url(); ?>add-category"><i class="icon-tasks"></i><span class="hidden-tablet"> Add Category</span></a></li>
 
+						<li><a href="<?php echo base_url(); ?>manage-category"><i class="icon-tasks"></i><span class="hidden-tablet"> Manage Category</span></a></li>
+
 						<li><a href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> UI Features</span></a></li>
 						<li><a href="widgets.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Widgets</span></a></li>
 						<li>

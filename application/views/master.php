@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="navbar-inner main-menu">				
 					<a href="<?php echo base_url(); ?>" class="logo pull-left"><img src="<?php echo base_url(); ?>front_end/themes/images/logo.png" class="site_logo" alt=""></a>
 					<nav id="menu" class="pull-right">
-						<ul>
+						<ul><!-- 
 							<li><a href="./products.html">Woman</a>					
 								<ul>
 									<li><a href="./products.html">Lacinia nibh</a></li>									
@@ -71,8 +71,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</ul>
 							</li>							
 							<li><a href="./products.html">Hangbag</a></li>
-							<li><a href="./products.html">Best Seller</a></li>
-							<li><a href="./products.html">Top Seller</a></li>
+							<li><a href="./products.html">Best Seller</a></li> -->
+							<?php
+
+								$category_info = $this->super_admin_model->select_all_published_category();
+								foreach($category_info as $v_category_info){
+							?>
+							<li><a href="./products.html"><?php echo $v_category_info->category_name; ?></a></li>
+						<?php } ?>
 						</ul>
 					</nav>
 				</div>

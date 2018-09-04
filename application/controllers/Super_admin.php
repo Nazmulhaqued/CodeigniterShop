@@ -29,6 +29,13 @@ public function save_category(){
 	redirect('/add-category');
 }
 
+public function manage_category(){
+	$data = array();
+	$data['all_category_info'] = $this->Super_admin_model->all_category_info();
+	$data['admin_main_content'] = $this->load->view('admin/pages/manage_category', $data,true);
+	$this->load->view('admin/admin_master',$data);
+}
+
 public function logout(){
 	$this->session->unset_userdata('admin_id');
 	$this->session->unset_userdata('admin_name');
